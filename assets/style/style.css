@@ -5,7 +5,7 @@
 
 
 body {
-    height: 100vh;
+    height: 100;
     width: 100vw;
     background-color: #f5f5f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -131,8 +131,26 @@ td {
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 .text-white{
     color: white;
+}
+.color-primary {
+    color: rgb(253, 217, 163);
+}
+.list{
+    list-style-type: square;
+    padding-left: 2rem;
+}
+.section6 {
+    width: 70%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
 }

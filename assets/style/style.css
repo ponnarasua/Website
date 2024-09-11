@@ -29,6 +29,10 @@ body {
         3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
         7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
         24px 17px 123px rgba(0, 0, 0, 0.27);
+    position: sticky;
+    top: 0px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 
@@ -107,15 +111,16 @@ body {
 
 .ed-table {
     width: 100%;
-    border: 1px solid gray;
+    border: 1px solid rgb(253, 217, 163);
     border-collapse: collapse;
+    text-align: center;
 }
 
 
 th,
 td {
     padding: 1rem;
-    border: 1px solid gray;
+    border: 1px solid rgb(253, 217, 163);
     padding: auto;
     justify-items: center;
 }
@@ -125,7 +130,8 @@ td {
     font-weight: bold;
     color: gray;
 }
-.section5{
+
+.section5 {
     width: 70%;
     height: 15rem;
     /* background-color: aquamarine; */
@@ -133,24 +139,91 @@ td {
     flex-direction: column;
     align-items: start;
 }
-.text-white{
+
+.text-white {
     color: white;
 }
+
 .color-primary {
     color: rgb(253, 217, 163);
 }
-.list{
+
+.list {
     list-style-type: square;
     padding-left: 2rem;
 }
+
 .section6 {
     width: 70%;
-    height: 2rem;
+    height: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     font-weight: bold;
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    border: 2px solid rgb(253, 217, 163);
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0.68, 0.85, 0.265, 1.85);
+    border-radius: 50px;
+    margin: 0 5px;
+    box-shadow:
+        inset 1px 1px 2px #fff,
+        0 0 5px #4442;
+}
+
+.child:hover {
+    background-color: white;
+    background-position:
+        -100px 100px,
+        -100px 100px;
+    /*transform: rotate3d(0.5, 1, 0, 30deg);*/
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+}
+
+.child-1:hover {
+    box-shadow: 0px 10px 10px #1e90ff;
+}
+
+.child-2:hover {
+    box-shadow: 0px 10px 10px #ff0000;
+}
+
+.child-3:hover {
+    box-shadow: 0px 10px 10px #000;
+}
+
+.child-4:hover {
+    box-shadow: 0px 10px 10px #00ff00;
+}
+
+.button {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.85, 0.265, 1.55);
+}
+
+.child:hover>.button {
+    transform: translate3d(0px, 20px, 30px) perspective(80px) rotateX(-60deg) translateY(2px) translateZ(10px);
+}
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image:  linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
 }

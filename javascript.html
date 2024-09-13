@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+            width: 33vw;
+            height: 33vh;
+            font-size: xx-large;
+            justify-content: center;
+            display: flex;
+        }
+        .red{
+            background-color: red;
+            animation: .2s myanimations infinite; ;
+        }
+        
+        @keyframes myanimations {
+            0%{
+                width: 33vw;
+                height: 33vh;
+            }
+            50%{
+                width: 100vw;
+                height: 100vh;
+            }
+            100%{
+                width: 33vw;
+                height: 33vh;
+            }
+            
+        }
+    </style>
 </head>
 <body>
-    <h1>JavaScript</h1>
+    <div class="red container"></div>
 </body>
+
 <script>
     // String //number //boolean //undefined //null //object //array
     let number = 10;
@@ -37,6 +67,7 @@
     console.log(array);
     console.log(array[0]);
     console.log(array[3]);
+    
 
 </script>
 

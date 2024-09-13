@@ -1,8 +1,10 @@
+.fav{
+    border-radius: 50%;
+}
 * {
     margin: 0px;
     padding: 0px;
 }
-
 
 body {
     height: 100;
@@ -17,8 +19,11 @@ body {
 
 
 .section1 {
-    width: 70%;
-    height: 12rem;
+    position:sticky;
+    width: 100vh;
+    top: 0;
+    height: 10rem;
+    width: 100%;
     background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
     display: flex;
     flex-direction: row;
@@ -29,23 +34,22 @@ body {
         3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
         7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
         24px 17px 123px rgba(0, 0, 0, 0.27);
-    position: sticky;
-    top: 0px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+
 }
 
 
 .profile-img-section {
-    width: 40%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .profile-data {
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +61,7 @@ body {
 .profile-img {
     height: 8rem;
     width: 8rem;
-    border-radius: 50%;
+    border-radius: 48%;
     box-shadow:
         1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
         3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
@@ -67,31 +71,31 @@ body {
 
 .section2 {
     width: 70%;
-    height: 12rem;
-    /* background-color: aquamarine; */
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    /* padding: 10px; */
+    margin: 5%;
+    float: center;
 }
+.section2 p{
+    text-align: justify;
+} 
 
 
 .section3 {
     width: 70%;
-    height: 20rem;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    margin: 5%;
     /* padding: 10px; */
 }
 
 
 .section4 {
     width: 70%;
-    height: 15rem;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
@@ -133,11 +137,12 @@ td {
 
 .section5 {
     width: 70%;
-    height: 15rem;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: center;
+    margin: 5%;
 }
 
 .text-white {
@@ -155,14 +160,13 @@ td {
 
 .section6 {
     width: 70%;
-    height: 6rem;
+    margin: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     font-weight: bold;
-    border: 2px solid rgb(253, 217, 163);
 }
 
 .child {

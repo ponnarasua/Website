@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        *{
+            justify-content: center;
+
+        }
+        .contact-form{
+            width: 35%;
+            border: 2px solid rgb(213, 228, 171);
+            border-radius: 10px;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            box-shadow:
+            1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
+            3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
+            7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
+            24px 17px 123px rgba(0, 0, 0, 0.27);
+            margin: auto;
+            font-family: sans-serif;
+            
+
+        }
+        .inp{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .cf{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+        input{
+            border-radius: 10px;
+            border:2px solid rgb(213, 228, 171);
+            box-shadow:
+            1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
+            3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
+            7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
+            24px 17px 123px rgba(0, 0, 0, 0.27);
+            height: 2rem;
+            width: 9rem;
+
+        }
+        button{
+            border-radius: 30px;
+            margin-top: 3%;
+            padding: 2%; 
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            
+        }
+        @media screen and (max-width: 600px) {
+            input{
+                margin: 8%;
+                width:80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Contact Form</center></h1>
+    <form class="contact-form">
+        <div class="cf">
+        <div class="inp">
+            <input type="text" name="name" id="name" placeholder=" Name:"/>
+            <br>
+            <input type="email" name="email" id="email" placeholder=" Email "/>
+            <br>
+            <input type="tel" name="phone" id="phone" placeholder=" Phone Number"/>
+            <br>
+            
+        </div>
+        </div>
+        <center><button class="submit-btn" onclick="Formdata(event)">Register</button></center>
+    </form>
+</body>
+<script>
+    function Formdata(e){
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        console.log(name);
+        const data = {
+            username: name,
+            useremail: email,
+            userphone: phone
+        }
+        const { username, useremail, userphone } = data 
+        console.log(username);
+    }
+</script>
+</html>

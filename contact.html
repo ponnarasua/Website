@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <style>
-        *{
+        * {
             justify-content: center;
 
         }
-        .contact-form{
+        .contact-form {
             width: 35%;
-            border: 2px solid rgb(213, 228, 171);
+            border: 2px solid rgb(255, 255, 255);
             border-radius: 10px;
-            padding-top: 4%;
+            padding-top: 5%;
             padding-bottom: 4%;
             box-shadow:
             1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
@@ -21,83 +22,121 @@
             7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
             24px 17px 123px rgba(0, 0, 0, 0.27);
             margin: auto;
+            margin-top: 5%;
             font-family: sans-serif;
-            
-
         }
-        .inp{
+
+
+        .inp {
             display: flex;
             flex-direction: column;
             justify-content: center;
 
         }
-        .cf{
+
+        .cf {
             display: flex;
             flex-direction: row;
             justify-content: center;
 
         }
-        input{
-            border-radius: 10px;
-            border:2px solid rgb(213, 228, 171);
-            box-shadow:
-            1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
-            3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
-            7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
-            24px 17px 123px rgba(0, 0, 0, 0.27);
-            height: 2rem;
-            width: 9rem;
 
+        input {
+            border-radius: 10px;
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow:
+                1.1px 0.8px 19.4px rgba(0, 0, 0, 0.099),
+                3px 2.1px 36.7px rgba(0, 0, 0, 0.141),
+                7.2px 5.1px 52.9px rgba(0, 0, 0, 0.168),
+                24px 17px 123px rgba(0, 0, 0, 0.27);
+            height: 40px;
+            width: 80%;
         }
-        button{
+
+        button {
             border-radius: 30px;
-            margin-top: 3%;
-            padding: 2%; 
-            background-color: blue;
+            margin-top: 5%;
+            margin-left: 50%;
+            padding: 4%;
+            background-color: rgb(69, 97, 255);
             color: white;
             border: none;
             cursor: pointer;
-            
         }
+
+        @keyframes animate {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        form {
+            animation: animate 2s ease-in;
+        }
+
         @media screen and (max-width: 600px) {
-            input{
+            input {
                 margin: 8%;
-                width:80%;
             }
         }
     </style>
 </head>
+
 <body>
-    <h1><center>Contact Form</center></h1>
     <form class="contact-form">
         <div class="cf">
-        <div class="inp">
-            <input type="text" name="name" id="name" placeholder=" Name:"/>
-            <br>
-            <input type="email" name="email" id="email" placeholder=" Email "/>
-            <br>
-            <input type="tel" name="phone" id="phone" placeholder=" Phone Number"/>
-            <br>
-            
-        </div>
+            <div class="inp">
+                <h1>
+                    <center>Contact Form</center>
+                </h1>
+                <input type="text" name="name" id="name" placeholder=" Name:" />
+                <br>
+                <input type="email" name="email" id="email" placeholder=" Email " />
+                <br>
+                <input type="tel" name="phone" id="phone" placeholder=" Phone Number" />
+                <br>
+                <input type="number" name="age" id="age" placeholder=" Age" />
+                <br>
+                <input type="password" name="password" id="password" placeholder="password" />
+                <br>
+            </div>
         </div>
         <center><button class="submit-btn" onclick="Formdata(event)">Register</button></center>
     </form>
 </body>
 <script>
-    function Formdata(e){
+    const Formdata = (e) => {
         e.preventDefault();
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let phone = document.getElementById("phone").value;
+        let age = document.getElementById("age").value;
+        let password = document.getElementById("password").value;
+        if (name !== "" && email !== "" && phone !== "" && age !== "" && password !== "") {
+            if (name === "Ponnarasu" || email === "ponnarasua410@gmail.com") {
+                console.log("Username/Email already registered !");
+            }
+            else {
+                console.log("Registered Successfully !");
+            }
+        }
+        else {
+            alert("Please fill all the fields");
+        }
         console.log(name);
         const data = {
             username: name,
             useremail: email,
-            userphone: phone
+            userphone: phone,
+            userage: age
         }
-        const { username, useremail, userphone } = data 
-        console.log(username);
+        const { username, useremail, userphone, userage } = data
+        console.log(username + " " + useremail + " " + userphone + " " + userage);
     }
 </script>
+
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+    async function API(){
+        try{
+            const response = await fetch('https://66e5273a5cc7f9b6273c6edc.mockapi.io/register');
+            const data = await response.json();
+            // console.table(data);
+            return data;
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+    async function APIDATA(){
+        const apidata = await API();
+        const mockdata = [{
+            "name": "John Doe"
+        }]
+        const activeusers = apidata.filter(data => data.id)
+        console.log(activeusers);
+        const structuredatabase = apidata.map((data) => { console.log(data); });
+        // console.log(apidata);
+    }
+    APIDATA();
+    </script>
+</body>
+</html>
